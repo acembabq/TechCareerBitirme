@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'category_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -14,8 +16,21 @@ class _HomeScreenState extends State<HomeScreen> {
     "Moda",
     "Saat & Aksesuar",
     "Elektronik",
-    "Anne & Çocuk"
+    "Anne & Çocuk",
+    "Ev & Mobilya",
+    "Kozmetik"
   ];
+
+/*
+  final List<Widget> pages = [
+    HomeScreen(),
+    TrendyolGoPage(),
+    FavoritesPage(),
+    CartPage(),
+    AccountPage(),
+  ];
+*/
+
   int selectedNavigationIndex = 0;
   int selectedIndex = 0;
 
@@ -112,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 child: Icon(
-                  Icons.favorite_border, // Boş kalp ikonu
+                  Icons.favorite_border,
                   color: Colors.red,
                   size: 20,
                 ),
@@ -185,7 +200,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             left: 16, top: 15, bottom: 15),
                         child: ElevatedButton.icon(
                           //TODO bitmedi
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => KategoriScreen()),
+                            );
+                          },
                           label: Text(
                             "Kategoriler",
                             style: TextStyle(
@@ -459,7 +479,7 @@ class _HomeScreenState extends State<HomeScreen> {
         selectedItemColor: Colors.orange,
         unselectedItemColor: Colors.grey.shade400,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Anasayfa"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Anasayfa",),
           BottomNavigationBarItem(
             icon: Icon(Icons.speed),
             label: "Trendyol Go",
