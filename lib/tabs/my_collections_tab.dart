@@ -20,12 +20,15 @@ class _KoleksiyonlarimTabState extends State<KoleksiyonlarimTab> {
         preferredSize: Size.fromHeight(60),
         child: Container(
           color: Colors.grey.shade100,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              _buildTabButton("Listelerim", 0),
-              _buildTabButton("Kaydettiklerim", 1),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                _buildTabButton("Listelerim", 0),
+                _buildTabButton("Kaydettiklerim", 1),
+              ],
+            ),
           ),
         ),
       ),

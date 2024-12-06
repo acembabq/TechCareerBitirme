@@ -19,6 +19,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           bottom: TabBar(
+            indicatorPadding: EdgeInsets.zero, //?
             labelColor: Colors.orange,
             unselectedLabelColor: Colors.grey.shade500,
             indicatorColor: Colors.orange,
@@ -38,8 +39,3 @@ class _FavoritesPageState extends State<FavoritesPage> {
     );
   }
 }
-
-
-
-
-
