@@ -11,6 +11,7 @@ class TrendyolGoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade200,
       appBar: AppBar(
         title: Text(
           'Trendyol Go',

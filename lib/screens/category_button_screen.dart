@@ -82,7 +82,7 @@ class _CategoryButtonScreenState extends State<CategoryButtonScreen> {
         children: [
           // Sol panel
           Container(
-            width: 130,
+            width: 140,
             color: Colors.grey.shade200,
             child: ListView.builder(
               itemCount: categories.length,
@@ -98,10 +98,11 @@ class _CategoryButtonScreenState extends State<CategoryButtonScreen> {
                         ? Colors.orange.shade100
                         : Colors.grey.shade200,
                     padding: const EdgeInsets.symmetric(vertical: 15),
-                    child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left:8.0),
                       child: Text(
                         categories[index],
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.start,
                         style: TextStyle(
                           fontSize: 20,
                           color: selectedCategory == categories[index]
